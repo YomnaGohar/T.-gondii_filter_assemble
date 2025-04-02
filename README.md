@@ -29,7 +29,6 @@ T.-gondii_filter_assemble/
 ├── workflow/             
 │   ├── rules/            
 │   ├── Snakefile          
-│   └── envs/              
 ├── config/               
 ├── scripts/              
 ├── resources/            
