@@ -27,8 +27,8 @@ This pipeline processes Oxford Nanopore sequencing data for *Toxoplasma gondii* 
 ```bash
 T.-gondii_filter_assemble/
 ├── workflow/             
-│   ├── rules/            
-│   ├── Snakefile          
+│   ├── Snakefile    
+├── rules/            
 ├── config/               
 ├── scripts/              
 ├── resources/            
