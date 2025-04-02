@@ -1,0 +1,40 @@
+# ============================================================
+# CONFIGURATION TEMPLATE for T.-gondii_filter_assemble (Snakemake)
+# ------------------------------------------------------------
+# - DO NOT modify the top-level keys (output_dir, sequencing)
+# - You SHOULD replace 'Sample1', 'Sample2', etc. with your actual sample names
+# - For each sample, provide a list of absolute paths to its raw FASTQ files
+# - The pipeline will concatenate all FASTQ files (after filtering) per sample into one
+# - Outputs will be saved inside the output directory under folders named after each sample
+# ============================================================
+
+# Path to the directory where all pipeline output will be stored
+output_dir: /absolute/path/to/output_directory
+
+# List of sequencing files for each sample
+# Replace 'Sample1', 'Sample2', etc. with your sample names
+# Provide absolute paths to all relevant FASTQ files for each sample
+sequencing:
+  Sample1:
+    [
+     /absolute/path/to/sample1_file1.fastq
+     /absolute/path/to/sample1_file2.fastq
+     /absolute/path/to/sample1_file3.fastq
+    ]
+  Sample2:
+    [
+     /absolute/path/to/sample2_file1.fastq
+     /absolute/path/to/sample2_file2.fastq
+    ]
+  Sample3:
+    [
+     /absolute/path/to/sample3_file1.fastq
+     /absolute/path/to/sample3_file2.fastq
+     /absolute/path/to/sample3_file3.fastq
+    ]
+Minimizer: /absolute/path/to/human_mouse_T.gondii.fasta #this fasta is used for filtering human or morse conatmination
+Mit: /absolute/path/to/T.gondii_mit_SB.fasta #this fasta is used for filtering mitochonderial reads which is optimal for T. gondii assembly and variant calling
+assemble: ["Sample3"]  #add here samples that will be assembled
+
+      
+
