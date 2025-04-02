@@ -75,6 +75,11 @@ snakemake --cores 4 assemble
 ```
 This step generates a folder named <assembly_without_mit_removal> that contains an assembly created from the <toxo.fastq> file located in the <combined_with_pipeline> folder within the specified output directory.
 
+```bash
+snakemake --cores 4 assemble_after_mit_removal
+```
+This step generates a folder named <assembly_with_mit_removal> that contains an assembly created from the <non_mit_reads.fastq> file located in the <combined_with_pipeline> folder within the specified output directory.
+
 
 
 
