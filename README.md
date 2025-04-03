@@ -59,13 +59,15 @@ Before running the pipeline, you must edit the configuration file:
 - To use it, copy and rename it to `config/config.yaml`
 
 ### 🚀 Running the Pipeline
-clone the repo
+
+Clone the repository and navigate to the working directory:
 
 ```bash
 git clone https://github.com/YomnaGohar/T.-gondii_filter_assemble.git
 cd T.-gondii_filter_assemble
-```
+
 To run the pipeline, you must navigate to the `workflow/` directory:
+
 ```bash
 snakemake --cores 4 filter
 ```
