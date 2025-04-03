@@ -61,9 +61,11 @@ Before running the pipeline, you must edit the configuration file:
 ### 🚀 Running the Pipeline
 
 Clone the repository and navigate to the working directory:
+
 ```bash
 git clone https://github.com/YomnaGohar/T.-gondii_filter_assemble.git
 cd T.-gondii_filter_assemble
+```
 
 To run the pipeline, you must navigate to the `workflow/` directory:
 
