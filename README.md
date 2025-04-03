@@ -89,6 +89,16 @@ snakemake --cores 4 assemble_after_mit_removal
 ```
 This step generates a folder named <assembly_with_mit_removal> that contains an assembly created from the <non_mit_reads.fastq> file located in the <combined_with_pipeline> folder within the specified output directory.
 
+```bash
+snakemake --cores 4 project_after_mit_removal
+```
+Outputs a folder named <assembly_to_reference> inside the output directory.
+This folder contains a BED file with genomic positions projected from the post-mitochondrial-removal assembly.
+
+```bash
+snakemake --cores 4 project
+```
+Outputs a similar projection using the assembly without mitochondrial reads filtered.
 
 
 
