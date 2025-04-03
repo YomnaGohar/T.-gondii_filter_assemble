@@ -59,6 +59,7 @@ Before running the pipeline, you must edit the configuration file:
 - To use it, copy and rename it to `config/config.yaml`
 
 ### 🚀 Running the Pipeline
+clone the repo
 
 ```bash
 git clone https://github.com/YomnaGohar/T.-gondii_filter_assemble.git
