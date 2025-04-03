@@ -1,24 +1,32 @@
-# T.-gondii_filter_assemble: Snakemake Pipeline for Filtering and Assembly of Toxoplasma gondii Nanopore Data
+# T.-gondii_filter_assemble  
+### Snakemake Pipeline for Filtering and Assembly of *Toxoplasma gondii* Nanopore Data
 
-This repository contains a **Snakemake pipeline** designed to process Oxford Nanopore sequencing data for *Toxoplasma gondii*. It performs:
+This repository contains a **Snakemake pipeline** for processing Oxford Nanopore sequencing data of *Toxoplasma gondii*. The pipeline performs filtering, assembly, and mapping of key genomic positions across assemblies.
+
+---
 
 ### 🧬 Pipeline Overview
 
-This pipeline processes Oxford Nanopore sequencing data for *Toxoplasma gondii* through the following stages:
+The pipeline runs through the following main steps:
 
-1. **Host contamination filtering**  
-   Each FASTQ file is filtered individually to remove reads originating from the host (human or mouse).  
-   ⚠️ **Important:** Filtered FASTQ files are saved in the same folder as the original FASTQ file.  
-   ➤ Ensure you have write permissions to these directories.
+1. **Host Contamination Filtering**  
+   Each raw FASTQ file is filtered individually to remove reads originating from the host (human or mouse genomes).  
+   ⚠️ **Note:** Filtered FASTQ files are saved **in the same directory** as the original files.  
+   ➤ Make sure you have **write access** to those folders.
 
-2. **Sample-level merging**  
-   After filtering, all FASTQ files for each sample are concatenated into a single combined FASTQ file.
+2. **Sample-Level Merging**  
+   After filtering, all FASTQ files belonging to a single sample are concatenated into one combined FASTQ file.
 
-3. **Mitochondrial read filtering**  
-   The concatenated FASTQ files are then filtered to retain only reads mapping to the *T. gondii* mitochondrial genome.
+3. **Mitochondrial Read Filtering**  
+   The merged FASTQ files are further filtered to retain only reads mapping to the *T. gondii* mitochondrial genome.
 
-4. **Genome assembly**  
-   The resulting mitochondrial reads are assembled into contigs to reconstruct the mitochondrial genome.
+4. **Genome Assembly**  
+   The mitochondrial reads are assembled into contigs to reconstruct the mitochondrial genome.
+
+5. **Mapping Predefined Genomic Positions**  
+   Genomic positions of interest (e.g., from older assemblies) are projected or located in the new assemblies for comparative analysis.
+
+---
 
 ---
 
